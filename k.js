@@ -14,7 +14,8 @@ buttonElement.addEventListener('click', function () {
 var theme = window.localStorage.getItem('theme')
 if (theme === null) {
   theme = 'day'
-} window.localStorage.setItem('theme', theme)
+}
+window.localStorage.setItem('theme', theme)
 document.body.setAttribute('class', theme)
 
 var visit = window.localStorage.getItem('visit')
