@@ -15,6 +15,7 @@ var theme = window.localStorage.getItem('theme')
 if (theme === null) {
   theme = 'day'
 } window.localStorage.setItem('theme', theme)
+document.body.setAttribute('class', theme)
 
 
 
