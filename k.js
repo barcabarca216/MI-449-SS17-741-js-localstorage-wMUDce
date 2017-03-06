@@ -1,4 +1,4 @@
-var buttonElement = document.getElementById('theme')
+var buttonElement = document.getElementById('changetheme')
 
 buttonElement.addEventListener('click', function () {
   if (theme === 'day') {
@@ -7,10 +7,27 @@ buttonElement.addEventListener('click', function () {
     theme = 'day'
   }
   document.body.setAttribute('class', theme)
+  window.localStorage.setItem('theme', theme)
 }
 
 )
-var theme = window.localstorage.getItem('theme', theme)
-var theme2 = window.localStorage.setItem('theme', theme2)
+var theme = window.localStorage.getItem('theme')
+if (theme === null) {
+  theme = 'day'
+} window.localStorage.setItem('theme', theme)
 
-//var visit = window.localStorage.getItem('visits')
+
+
+var remember = document.getElementById('changetheme')
+
+
+
+var visit = window.localStorage.getItem('visit')
+
+if (visit === null) {
+  visit = 0
+} else {
+  visit = parseInt(visit)
+}
+
+var visitcount = window.localStorage.getItem('visitcount') === 'true'
