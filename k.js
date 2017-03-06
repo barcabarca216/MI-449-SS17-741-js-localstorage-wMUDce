@@ -17,12 +17,6 @@ if (theme === null) {
 } window.localStorage.setItem('theme', theme)
 document.body.setAttribute('class', theme)
 
-
-
-var remember = document.getElementById('changetheme')
-
-
-
 var visit = window.localStorage.getItem('visit')
 
 if (visit === null) {
@@ -31,4 +25,6 @@ if (visit === null) {
   visit = parseInt(visit)
 }
 
-var visitcount = window.localStorage.getItem('visitcount') === 'true'
+visit = visit + 1
+window.localStorage.setItem('visit', visit)
+document.getElementById('visit').innerHTML = 'You have visited ' + visit + ' times.'
